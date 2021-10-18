@@ -11,4 +11,4 @@ This template should help get you started developing with Vue 3 in Vite. The tem
 1. Run `npm install --global yarn`
 2. Configure your environment variables: `cp .env.example .env`
 3. Run `yarn install`
-4. Comile the project run `yarn dev`
+4. Run `yarn dev`
