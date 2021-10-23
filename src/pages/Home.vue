@@ -108,8 +108,9 @@ export default {
         const data = new FormData();
         data.append('image', payload.image);
 
+        // console.log(payload.image)
         // @TODO the url of server that receives the image.
-
+        console.log(data)
         const request = await axiosInstance.post('/mask', payload.image);
 
         console.log(request);
@@ -122,6 +123,8 @@ export default {
         // @TODO check if error.response.data is really return error from server.
 
         errors.value.message = error.response.data;
+        
+        this.isStart = false;
       }
     }
 
