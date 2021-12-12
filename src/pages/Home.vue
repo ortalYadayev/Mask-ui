@@ -42,6 +42,10 @@
         </button>
       </div>
     </form>
+
+    <div>
+      {{ isMask }}
+    </div>
   </div>
 </template>
 
@@ -74,13 +78,16 @@ export default {
 
     const v$ = useVuelidate(rules, payload);
 
-    let isStart = false;
+    let isStart = ref(false);
+
+    let isMask = ref('');
 
     return {
       payload,
       errors,
       v$,
       isStart,
+      isMask,
       onFileChange,
       upload,
       resetErrors,
@@ -108,14 +115,11 @@ export default {
         const data = new FormData();
         data.append('image', payload.image);
 
-        // console.log(payload.image)
-        // @TODO the url of server that receives the image.
-        console.log(data)
         const request = await axiosInstance.post('/mask', payload.image);
 
-        console.log(request);
+        console.log(request.data);
 
-        // @TODO check if the request is working
+        isMask.value = request.data;
 
         this.isStart = false;
       } catch (error) {
