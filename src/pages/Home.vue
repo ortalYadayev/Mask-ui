@@ -2,10 +2,10 @@
   <div class="min-h-screen flex flex-col justify-center items-center bg-gray-100">
     <Spinner :start="isStart" />
     <div class="flex flex-col sm:flex-row text-center justify-center items-center text-4xl md:text-5xl px-10 lg:px-0 mb-20 mt-10 sm:mt-0">
-      Project About A Mask
+      Project About A Fruit
       <img
         class="hidden sm:block mt-4 sm:mt-0 sm:ml-5 rounded-full w-40 h-40"
-        src="../assets/images/mask.jpg"
+        src="../assets/images/fruit.jpeg"
         alt="mask corona virus"
       >
     </div>
